@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config()
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -21,7 +23,7 @@ module.exports = {
       resolve: "gatsby-source-microcms",
       options: {
         apiKey: process.env.MICROCMS_API_KEY,
-        serviceId: "example",
+        serviceId: "sugino",
         apis: [
           {
             endpoint: "news",
