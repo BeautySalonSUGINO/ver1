@@ -17,5 +17,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images/`,
       },
     },
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: process.env.MICROCMS_API_KEY,
+        serviceId: "example",
+        apis: [
+          {
+            endpoint: "news",
+          },
+          { endpoint: "category" },
+        ],
+      },
+    },
   ],
 }
