@@ -19,6 +19,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images/`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-microcms",
       options: {
