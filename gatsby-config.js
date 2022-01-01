@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config()
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -15,6 +17,20 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images/`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: process.env.MICROCMS_API_KEY,
+        serviceId: "sugino",
+        apis: [
+          {
+            endpoint: "news",
+          },
+          { endpoint: "category" },
+        ],
       },
     },
   ],
