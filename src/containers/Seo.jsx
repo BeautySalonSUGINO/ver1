@@ -2,7 +2,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
 
-const Seo = () => {
+const Seo = props => {
+  const { pagetitle, pagedesc } = props
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -17,11 +19,15 @@ const Seo = () => {
 
   const metaData = data.site.siteMetadata
 
+  const title = pagetitle || metaData.title
+
+  const description = pagedesc || metaData.description
+
   return (
     <Helmet>
       <html lang={metaData.lang} />
-      <title>{metaData.title}</title>
-      <meta name="description" content={metaData.description} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
     </Helmet>
   )
 }
