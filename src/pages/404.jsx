@@ -7,7 +7,7 @@ import Seo from "../containers/Seo"
 const NotFound = () => {
   return (
     <BaseLayout>
-      <Seo />
+      <Seo pagetitle="ページが見つかりません" />
       <div>404:ページが見つかりません</div>
     </BaseLayout>
   )
