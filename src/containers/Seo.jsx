@@ -19,7 +19,7 @@ const Seo = props => {
 
   const metaData = data.site.siteMetadata
 
-  const title = pagetitle || metaData.title
+  const title = pagetitle ? `${pagetitle}| ${metaData.title}` : metaData.title
 
   const description = pagedesc || metaData.description
 
