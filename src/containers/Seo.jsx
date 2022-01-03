@@ -3,7 +3,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 const Seo = props => {
-  const { pagetitle, pagedesc } = props
+  const { pagetitle, pagedesc, pagepath } = props
 
   const data = useStaticQuery(graphql`
     query {
@@ -24,13 +24,15 @@ const Seo = props => {
 
   const description = pagedesc || metaData.description
 
+  const url = pagepath ? `${metaData.siteUrl}${pagepath}` : metaData.siteUrl
+
   return (
     <Helmet>
       <html lang={metaData.lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
 
-      <link rel="canonical" href={metaData.siteUrl} />
+      <link rel="canonical" href={url} />
     </Helmet>
   )
 }
