@@ -12,6 +12,7 @@ const Seo = props => {
           title
           lang
           description
+          siteUrl
         }
       }
     }
@@ -28,6 +29,8 @@ const Seo = props => {
       <html lang={metaData.lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
+
+      <link rel="canonical" href={metaData.siteUrl} />
     </Helmet>
   )
 }
