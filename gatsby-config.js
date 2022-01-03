@@ -8,6 +8,12 @@ require("dotenv").config()
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Beauty Salon SUGINO`,
+    description: `三重県松阪市にあるレトロで小さな美容室「Beauty Salon SUGINO」のホームページです。`,
+    lang: `ja`,
+    siteUrl: `https://example.netlify.app`,
+  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
