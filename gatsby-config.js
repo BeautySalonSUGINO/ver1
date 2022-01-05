@@ -13,6 +13,8 @@ module.exports = {
     description: `三重県松阪市にあるレトロで小さな美容室「Beauty Salon SUGINO」のホームページです。`,
     lang: `ja`,
     siteUrl: `https://example.netlify.app`,
+    locate: `ja_JP`,
+    fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
   },
   plugins: [
     `gatsby-plugin-image`,
