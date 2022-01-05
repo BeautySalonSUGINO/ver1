@@ -13,6 +13,8 @@ module.exports = {
     description: `三重県松阪市にあるレトロで小さな美容室「Beauty Salon SUGINO」のホームページです。`,
     lang: `ja`,
     siteUrl: `https://example.netlify.app`,
+    locate: `ja_JP`,
+    fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -26,6 +28,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Beauty Salon SUGINO`,
+        short_name: `スギノ美容室`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/assets/images/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-source-microcms",
       options: {
