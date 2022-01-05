@@ -29,6 +29,18 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Beauty Salon SUGINO`,
+        short_name: `スギノ美容室`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/assets/images/icon.png`,
+      },
+    },
+    {
       resolve: "gatsby-source-microcms",
       options: {
         apiKey: process.env.MICROCMS_API_KEY,
