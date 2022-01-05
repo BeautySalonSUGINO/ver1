@@ -3,7 +3,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 const Seo = props => {
-  const { pagetitle, pagedesc, pagepath } = props
+  const { pagetitle, pagedesc, pagepath, pageimg, pageimgw, pageimgh } = props
 
   const data = useStaticQuery(graphql`
     query {
@@ -28,6 +28,13 @@ const Seo = props => {
 
   const url = pagepath ? `${metaData.siteUrl}${pagepath}` : metaData.siteUrl
 
+  const imgurl = pageimg
+    ? `${metaData.siteUrl}${pageimg}`
+    : `${metaData.siteUrl}/sugino_ogp.jpg`
+
+  const imgw = pageimgw || 1920
+  const imgh = pageimgh || 1080
+
   return (
     <Helmet>
       <html lang={metaData.lang} />
@@ -43,6 +50,12 @@ const Seo = props => {
       <meta property="og:type" content="website" />
       <meta property="og:locate" content={metaData.locate} />
       <meta property="fb:app_id" content={metaData.fbappid} />
+
+      <meta property="og:image" content={imgurl} />
+      <meta property="og:image:width" content={imgw} />
+      <meta property="og:image:height" content={imgh} />
+
+      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   )
 }
