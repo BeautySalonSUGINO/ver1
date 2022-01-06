@@ -42,17 +42,25 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-source-microcms",
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiKey: process.env.MICROCMS_API_KEY,
-        serviceId: "sugino",
-        apis: [
-          {
-            endpoint: "news",
-          },
-          { endpoint: "category" },
-        ],
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
       },
     },
+    // {
+    //   resolve: "gatsby-source-microcms",
+    //   options: {
+    //     apiKey: process.env.MICROCMS_API_KEY,
+    //     serviceId: "sugino",
+    //     apis: [
+    //       {
+    //         endpoint: "news",
+    //       },
+    //       { endpoint: "category" },
+    //     ],
+    //   },
+    // },
   ],
 }
