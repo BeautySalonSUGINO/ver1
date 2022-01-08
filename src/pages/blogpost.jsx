@@ -9,6 +9,9 @@ const BlogPost = ({ data }) => {
   return (
     <BaseLayout>
       <h2>{contentfulNews.title}</h2>
+      <time dateTime={contentfulNews.publishDate}>
+        <p>{contentfulNews.publishDateJP}</p>
+      </time>
     </BaseLayout>
   )
 }
@@ -19,6 +22,8 @@ export const query = graphql`
   query {
     contentfulNews {
       title
+      publishDate
+      publishDateJP: publishDate(formatString: "YYYY年MM月DD日")
     }
   }
 `
