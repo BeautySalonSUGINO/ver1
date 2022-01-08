@@ -12,6 +12,11 @@ const BlogPost = ({ data }) => {
       <time dateTime={contentfulNews.publishDate}>
         <p>{contentfulNews.publishDateJP}</p>
       </time>
+      <ul>
+        {contentfulNews.category.map(cat => {
+          return <li key={cat.id}>{cat.category}</li>
+        })}
+      </ul>
     </BaseLayout>
   )
 }
@@ -24,6 +29,11 @@ export const query = graphql`
       title
       publishDate
       publishDateJP: publishDate(formatString: "YYYY年MM月DD日")
+      category {
+        category
+        categorySlug
+        id
+      }
     }
   }
 `
