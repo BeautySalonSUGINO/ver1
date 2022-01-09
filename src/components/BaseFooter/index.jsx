@@ -1,7 +1,15 @@
 import React from "react"
 
+import "./style.scss"
+
 const BaseFooter = () => {
-  return <footer>&copy;Beauty Salon SUGINO</footer>
+  return (
+    <footer className="baseFooter">
+      <div className="baseFooter__div">
+        <p>&copy;2021 BeautySalon SUGINO</p>
+      </div>
+    </footer>
+  )
 }
 
 export default BaseFooter
