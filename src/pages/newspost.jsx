@@ -2,6 +2,7 @@ import React from "react"
 
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import BaseLayout from "../components/BaseLayout"
 
@@ -22,6 +23,7 @@ const BlogPost = ({ data }) => {
         image={contentfulNews.eyecatch.gatsbyImageData}
         alt={contentfulNews.eyecatch.description}
       />
+      <div>{renderRichText(contentfulNews.content)}</div>
     </BaseLayout>
   )
 }
@@ -42,6 +44,9 @@ export const query = graphql`
       eyecatch {
         gatsbyImageData(width: 500, layout: CONSTRAINED)
         description
+      }
+      content {
+        raw
       }
     }
   }
