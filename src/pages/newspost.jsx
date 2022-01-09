@@ -3,8 +3,28 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { BLOCKS } from "@contentful/rich-text-types"
 
 import BaseLayout from "../components/BaseLayout"
+
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      return (
+        <div style={{ width: "20%" }}>
+          <GatsbyImage
+            image={node.data.target.gatsbyImageData}
+            alt={
+              node.data.target.description
+                ? node.data.target.description
+                : node.data.target.title
+            }
+          />
+        </div>
+      )
+    },
+  },
+}
 
 const BlogPost = ({ data }) => {
   const contentfulNews = data.contentfulNews
@@ -23,7 +43,7 @@ const BlogPost = ({ data }) => {
         image={contentfulNews.eyecatch.gatsbyImageData}
         alt={contentfulNews.eyecatch.description}
       />
-      <div>{renderRichText(contentfulNews.content)}</div>
+      <div>{renderRichText(contentfulNews.content, options)}</div>
     </BaseLayout>
   )
 }
@@ -47,6 +67,15 @@ export const query = graphql`
       }
       content {
         raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            gatsbyImageData(layout: FULL_WIDTH)
+            title
+            description
+          }
+        }
       }
     }
   }
