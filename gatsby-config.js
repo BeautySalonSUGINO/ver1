@@ -49,6 +49,7 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
+    `gatsby-plugin-sass`,
     // {
     //   resolve: "gatsby-source-microcms",
     //   options: {
