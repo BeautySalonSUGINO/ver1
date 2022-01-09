@@ -1,6 +1,7 @@
 import React from "react"
 
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import BaseLayout from "../components/BaseLayout"
 
@@ -17,6 +18,10 @@ const BlogPost = ({ data }) => {
           return <li key={cat.id}>{cat.category}</li>
         })}
       </ul>
+      <GatsbyImage
+        image={contentfulNews.eyecatch.gatsbyImageData}
+        alt={contentfulNews.eyecatch.description}
+      />
     </BaseLayout>
   )
 }
@@ -33,6 +38,10 @@ export const query = graphql`
         category
         categorySlug
         id
+      }
+      eyecatch {
+        gatsbyImageData(width: 500, layout: CONSTRAINED)
+        description
       }
     }
   }
