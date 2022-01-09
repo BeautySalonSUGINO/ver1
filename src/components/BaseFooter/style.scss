@@ -1,0 +1,11 @@
+.baseFooter {
+  background-color: black;
+  &__div {
+    width: 80%;
+    margin: 0 auto;
+    p {
+      padding: 16px 0;
+      color: white;
+    }
+  }
+}
