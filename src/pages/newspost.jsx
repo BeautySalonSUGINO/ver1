@@ -44,10 +44,7 @@ const BlogPost = ({ data }) => {
           return <li key={cat.id}>{cat.category}</li>
         })}
       </ul>
-      <GatsbyImage
-        image={contentfulNews.eyecatch.gatsbyImageData}
-        alt={contentfulNews.eyecatch.description}
-      />
+
       <div>{renderRichText(contentfulNews.content, options)}</div>
     </BaseLayout>
   )
