@@ -11,6 +11,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             slug
           }
+          next {
+            title
+            slug
+          }
+          previous {
+            title
+            slug
+          }
         }
       }
     }
@@ -21,15 +29,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  blogresult.data.allContentfulBlog.edges.forEach(({ node }) => {
-    createPage({
-      path: `/blog/${node.slug}`,
-      component: path.resolve(`./src/templates/blogpost.jsx`),
-      context: {
-        id: node.id,
-      },
-    })
-  })
+  blogresult.data.allContentfulBlog.edges.forEach(
+    ({ node, next, previous }) => {
+      createPage({
+        path: `/blog/${node.slug}`,
+        component: path.resolve(`./src/templates/blogpost.jsx`),
+        context: {
+          id: node.id,
+          next,
+          previous,
+        },
+      })
+    }
+  )
 
   const newsresult = await graphql(`
     query {
@@ -37,6 +49,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
+            slug
+          }
+          next {
+            title
+            slug
+          }
+          previous {
+            title
             slug
           }
         }
@@ -49,13 +69,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  newsresult.data.allContentfulNews.edges.forEach(({ node }) => {
-    createPage({
-      path: `/news/${node.slug}`,
-      component: path.resolve(`./src/templates/newspost.jsx`),
-      context: {
-        id: node.id,
-      },
-    })
-  })
+  newsresult.data.allContentfulNews.edges.forEach(
+    ({ node, next, previous }) => {
+      createPage({
+        path: `/news/${node.slug}`,
+        component: path.resolve(`./src/templates/newspost.jsx`),
+        context: {
+          id: node.id,
+          next,
+          previous,
+        },
+      })
+    }
+  )
 }
