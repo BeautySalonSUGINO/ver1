@@ -30,4 +30,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  const newsresult = await graphql(`
+    query {
+      allContentfulNews(sort: { fields: publishDate, order: DESC }) {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (newsresult.errors) {
+    reporter.panicOnBuild(`GraphQLのクエリでエラーが発生しました`)
+    return
+  }
+
+  newsresult.data.allContentfulNews.edges.forEach(({ node }) => {
+    createPage({
+      path: `/news/${node.slug}`,
+      component: path.resolve(`./src/templates/newspost.jsx`),
+      context: {
+        id: node.id,
+      },
+    })
+  })
 }
