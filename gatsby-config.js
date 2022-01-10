@@ -17,6 +17,22 @@ module.exports = {
     fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@images": "src/assets/images",
+          "@styles": "src/assets/styles",
+          "@stylesComponent": "src/assets/styles/Object/Component",
+          "@components": "src/components",
+          "@containers": "src/containers",
+          "@pages": "src/pages",
+          "@templates": "src/templates",
+        },
+        extensions: ["js", "jsx"],
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

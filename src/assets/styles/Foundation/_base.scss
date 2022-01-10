@@ -1,0 +1,35 @@
+// このファイルではタグに自体にスタイルを適応することする。
+// img {
+//  width: 100%;
+//  height: auto;
+// }
+
+@use "../Foundation/variable" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $textWebFont-Klee-One;
+  color: $textColor;
+}
+
+body {
+  background-color: $back-green;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:hover {
+    color: rgba($color: $textColor, $alpha: 0.7);
+  }
+}

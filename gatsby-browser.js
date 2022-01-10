@@ -1,1 +1,2 @@
-import "scss-reset/_reset.scss"
+import "@styles/Foundation/_reset"
+import "@styles/Foundation/_base.scss"
