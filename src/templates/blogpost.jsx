@@ -1,6 +1,6 @@
 import React from "react"
 
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
@@ -31,7 +31,7 @@ const options = {
   },
 }
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const contentfulBlog = data.contentfulBlog
   return (
     <BaseLayout>
@@ -46,6 +46,17 @@ const BlogPost = ({ data }) => {
       </ul>
 
       <div>{renderRichText(contentfulBlog.content, options)}</div>
+
+      {pageContext.next && (
+        <Link to={`/blog/${pageContext.next.slug}`} rel="prev">
+          前の記事
+        </Link>
+      )}
+      {pageContext.previous && (
+        <Link to={`/blog/${pageContext.previous.slug}`} rel="next">
+          次の記事
+        </Link>
+      )}
     </BaseLayout>
   )
 }
