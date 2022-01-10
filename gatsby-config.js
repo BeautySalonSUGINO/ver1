@@ -24,6 +24,7 @@ module.exports = {
           "@src": "src",
           "@images": "src/assets/images",
           "@styles": "src/assets/styles",
+          "@stylesComponent": "src/assets/styles/Object/Component",
           "@components": "src/components",
           "@containers": "src/containers",
           "@pages": "src/pages",
