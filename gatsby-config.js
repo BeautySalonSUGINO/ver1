@@ -30,7 +30,7 @@ module.exports = {
           "@pages": "src/pages",
           "@templates": "src/templates",
         },
-        extensions: ["js", "jsx", "scss"],
+        extensions: ["js", "jsx"],
       },
     },
     `gatsby-plugin-image`,
