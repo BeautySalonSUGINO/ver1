@@ -31,7 +31,7 @@ const options = {
   },
 }
 
-const BlogPost = ({ data }) => {
+const NewsPost = ({ data }) => {
   const contentfulNews = data.contentfulNews
   return (
     <BaseLayout>
@@ -50,7 +50,7 @@ const BlogPost = ({ data }) => {
   )
 }
 
-export default BlogPost
+export default NewsPost
 
 export const query = graphql`
   query {
