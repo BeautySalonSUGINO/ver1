@@ -7,6 +7,8 @@ import { BLOCKS } from "@contentful/rich-text-types"
 
 import BaseLayout from "../components/BaseLayout"
 
+import Seo from "../containers/Seo"
+
 const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: node => {
@@ -35,6 +37,8 @@ const NewsPost = ({ data, pageContext }) => {
   const contentfulNews = data.contentfulNews
   return (
     <BaseLayout>
+      <Seo pagetitle={contentfulNews.title} />
+
       <h2>{contentfulNews.title}</h2>
       <time dateTime={contentfulNews.publishDate}>
         <p>{contentfulNews.publishDateJP}</p>
