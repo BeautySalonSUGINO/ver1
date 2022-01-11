@@ -18,7 +18,7 @@ const TopSlider = () => {
       <div className="c-topMainVisual__div">
         <StaticImage
           layout="fullWidth"
-          src="../../assets/images/main-visual.png"
+          src="../../assets/images/main-visual1.png"
           alt="メインビジュアル1"
           style={{ height: "100%" }}
         />
@@ -26,7 +26,7 @@ const TopSlider = () => {
       <div className="c-topMainVisual__div">
         <StaticImage
           layout="fullWidth"
-          src="../../assets/images/main-visual2.jpg"
+          src="../../assets/images/main-visual2.png"
           alt="メインビジュアル2"
           style={{ height: "100%" }}
         />
