@@ -1,6 +1,6 @@
 import React from "react"
 
-import "@stylesComponent/_topMainVisual.scss"
+import "@stylesComponent/_topMainVisualHeader.scss"
 
 import TopSlider from "../TopSlider"
 
