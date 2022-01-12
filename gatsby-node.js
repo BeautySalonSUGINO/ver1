@@ -97,4 +97,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     }
   )
+
+  const newsListPerPage = 50
+  const newsList = newsresult.data.allContentfulNews.edges.length
+  const newsPages = Math.ceil(newsList / newsListPerPage)
+
+  Array.from({ length: newsPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/newslist/` : `/newslist/${i + 1}`,
+      component: path.resolve("./src/templates/newslist.jsx"),
+      context: {
+        skip: newsListPerPage * i,
+        limit: newsListPerPage,
+      },
+    })
+  })
 }
