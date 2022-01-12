@@ -44,6 +44,9 @@ const BlogPost = ({ data, pageContext, location }) => {
           JSON.parse(contentfulBlog.content.raw)
         ).slice(0, 70)}...`}
         pagepath={location.pathname}
+        pageimg={contentfulBlog.eyecatch.file.url}
+        pageimgw={contentfulBlog.eyecatch.file.details.image.width}
+        pageimgh={contentfulBlog.eyecatch.file.details.image.height}
       />
 
       <h2>{contentfulBlog.title}</h2>
@@ -88,6 +91,15 @@ export const query = graphql`
       eyecatch {
         gatsbyImageData(width: 500, layout: CONSTRAINED)
         description
+        file {
+          details {
+            image {
+              width
+              height
+            }
+          }
+          url
+        }
       }
       content {
         raw
