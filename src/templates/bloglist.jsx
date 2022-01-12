@@ -30,11 +30,11 @@ const BlogList = ({ data, location }) => {
 export default BlogList
 
 export const query = graphql`
-  query {
+  query ($skip: Int!, $limit: Int!) {
     allContentfulBlog(
       sort: { order: DESC, fields: publishDate }
-      skip: 0
-      limit: 10
+      skip: $skip
+      limit: $limit
     ) {
       edges {
         node {
