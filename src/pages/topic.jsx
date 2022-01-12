@@ -34,7 +34,7 @@ const options = {
   },
 }
 
-const TopicPost = ({ data, location }) => {
+const Topic = ({ data, location }) => {
   const contentfulTopic = data.contentfulTopic
   return (
     <BaseLayout>
@@ -56,7 +56,7 @@ const TopicPost = ({ data, location }) => {
   )
 }
 
-export default TopicPost
+export default Topic
 
 export const query = graphql`
   query {

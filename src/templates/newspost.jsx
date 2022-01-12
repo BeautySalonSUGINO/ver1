@@ -5,9 +5,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 
-import BaseLayout from "../components/BaseLayout"
+import BaseLayout from "@components/BaseLayout"
 
-import Seo from "../containers/Seo"
+import Seo from "@containers/Seo"
 
 const options = {
   renderNode: {

@@ -6,9 +6,9 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
 
-import BaseLayout from "../components/BaseLayout"
+import BaseLayout from "@components/BaseLayout"
 
-import Seo from "../containers/Seo"
+import Seo from "@containers/Seo"
 
 const options = {
   renderNode: {
