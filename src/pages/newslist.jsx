@@ -31,7 +31,11 @@ export default NewsList
 
 export const query = graphql`
   query {
-    allContentfulNews(sort: { order: DESC, fields: publishDate }) {
+    allContentfulNews(
+      sort: { order: DESC, fields: publishDate }
+      skip: 0
+      limit: 50
+    ) {
       edges {
         node {
           title
