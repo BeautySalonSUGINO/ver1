@@ -31,7 +31,11 @@ export default BlogList
 
 export const query = graphql`
   query {
-    allContentfulBlog(sort: { order: DESC, fields: publishDate }) {
+    allContentfulBlog(
+      sort: { order: DESC, fields: publishDate }
+      skip: 0
+      limit: 10
+    ) {
       edges {
         node {
           title
