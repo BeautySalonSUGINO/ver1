@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 // Styles
 import "@stylesComponent/_newsContentsItem.scss"
@@ -18,11 +19,11 @@ const NewsArea = () => {
           <p id="c-topic--p1" className="u-ml__32px u-ptb__12px">
             TOPIC
           </p>
-          <a href="#">
+          <Link to={`/topic`}>
             <p className="u-ml__96px">
               新型コロナウイルスに関する感染対策について
             </p>
-          </a>
+          </Link>
         </div>
       </div>
       <div id="p-newsContents">
