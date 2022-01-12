@@ -54,7 +54,7 @@ const NewsArea = () => {
       </div>
       <span className="c-border u-mb__16px"></span>
       <div className="c-scissorsButton u-mb__96px">
-        <a href="#">
+        <Link to={`/bloglist/`}>
           <div className="c-scissorsButton--content">
             <div className="c-scissorsButton--icon">
               <img src={Scissors} alt="ハサミのアイコン" />
@@ -63,7 +63,7 @@ const NewsArea = () => {
               一覧はこちら
             </p>
           </div>
-        </a>
+        </Link>
       </div>
     </section>
   )
