@@ -1,0 +1,12 @@
+.c-newsContentsItem {
+  list-style-type: none;
+  border-bottom: dashed 2px white;
+
+  a {
+    display: flex;
+  }
+
+  &--day {
+    width: 96px;
+  }
+}

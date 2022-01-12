@@ -1,0 +1,22 @@
+.c-scissorsButton {
+  display: block;
+  text-align: right;
+  &--content {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    display: inline-block;
+  }
+  &--icon {
+    width: 42px;
+    transform: rotate(225deg);
+  }
+
+  &--p {
+    &:hover {
+      border-bottom: solid 1px white;
+      box-sizing: border-box;
+    }
+  }
+}

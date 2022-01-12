@@ -1,0 +1,12 @@
+#c-topic {
+  width: 80%;
+  margin: 0 auto;
+  border: solid 1px white;
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  &--p1 {
+    width: 96px;
+  }
+}
