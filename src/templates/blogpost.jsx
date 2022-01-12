@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
 
 import BaseLayout from "../components/BaseLayout"
 
@@ -37,7 +38,12 @@ const BlogPost = ({ data, pageContext }) => {
   const contentfulBlog = data.contentfulBlog
   return (
     <BaseLayout>
-      <Seo pagetitle={contentfulBlog.title} />
+      <Seo
+        pagetitle={contentfulBlog.title}
+        pagedesc={`${documentToPlainTextString(
+          JSON.parse(contentfulBlog.content.raw)
+        ).slice(0, 70)}...`}
+      />
 
       <h2>{contentfulBlog.title}</h2>
       <time dateTime={contentfulBlog.publishDate}>
