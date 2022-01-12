@@ -34,7 +34,7 @@ const options = {
   },
 }
 
-const BlogPost = ({ data, pageContext }) => {
+const BlogPost = ({ data, pageContext, location }) => {
   const contentfulBlog = data.contentfulBlog
   return (
     <BaseLayout>
@@ -43,6 +43,7 @@ const BlogPost = ({ data, pageContext }) => {
         pagedesc={`${documentToPlainTextString(
           JSON.parse(contentfulBlog.content.raw)
         ).slice(0, 70)}...`}
+        pagepath={location.pathname}
       />
 
       <h2>{contentfulBlog.title}</h2>
