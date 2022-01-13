@@ -23,7 +23,7 @@ const ProductSlider = () => {
   })
 
   return (
-    <div className="productSlider">
+    <div className="c-productSlider">
       <div>
         <div className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">
@@ -62,13 +62,14 @@ const ProductSlider = () => {
           </div>
         )}
       </div>
-      <div className="productSlider__arrow">
+      <div className="c-productSlider--arrow">
         <button
           onClick={e => e.stopPropagation() || instanceRef.current?.prev()}
         >
           <img src={arrowLeftSvg} alt="Arrowアイコン（左）" />
         </button>
         <button
+          className="u-mt__32px"
           onClick={e => e.stopPropagation() || instanceRef.current?.next()}
         >
           <img src={arrowRightSvg} alt="Arrowアイコン（右）" />
