@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 
 import TopMainVisualHeader from "@components/TopMainVisualHeader"
 import ProductArea from "@components/ProductArea"
+import InfomationArea from "@containers/InfomationArea"
+import BaseFooter from "@components/BaseFooter"
 
 import Seo from "@containers/Seo"
 import NewsArea from "@containers/NewsArea"
@@ -18,6 +20,10 @@ const Index = ({ data }) => {
       <ProductArea />
 
       <NewsArea data={data} />
+
+      <InfomationArea />
+
+      <BaseFooter />
     </>
   )
 }
