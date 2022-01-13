@@ -1,0 +1,14 @@
+.c-menuCard {
+  width: 50%;
+  max-width: 500px;
+
+  border-bottom: 1px solid white;
+  &--h3 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  &--icon {
+    width: 48px;
+  }
+}
