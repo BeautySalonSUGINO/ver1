@@ -1,7 +1,10 @@
 .baseFooter {
   background-color: black;
+
+  border-top: 3px solid white;
   &__div {
-    width: 80%;
+    width: 70%;
+    max-width: 1080px;
     margin: 0 auto;
     p {
       padding: 16px 0;
