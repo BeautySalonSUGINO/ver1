@@ -1,8 +1,8 @@
 import React from "react"
 
-import BaseLayout from "../components/BaseLayout"
+import BaseLayout from "@components/BaseLayout"
 
-import Seo from "../containers/Seo"
+import Seo from "@containers/Seo"
 
 const NotFound = ({ location }) => {
   return (

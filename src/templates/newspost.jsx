@@ -5,9 +5,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 
-import BaseLayout from "../components/BaseLayout"
+import BaseLayout from "@components/BaseLayout"
 
-import Seo from "../containers/Seo"
+import Seo from "@containers/Seo"
 
 const options = {
   renderNode: {
@@ -33,11 +33,17 @@ const options = {
   },
 }
 
-const NewsPost = ({ data, pageContext }) => {
+const NewsPost = ({ data, pageContext, location }) => {
   const contentfulNews = data.contentfulNews
   return (
     <BaseLayout>
-      <Seo pagetitle={contentfulNews.title} />
+      <Seo
+        pagetitle={contentfulNews.title}
+        pagepath={location.pathname}
+        pageimg={contentfulNews.eyecatch.file.url}
+        pageimgw={contentfulNews.eyecatch.file.details.image.width}
+        pageimgh={contentfulNews.eyecatch.file.details.image.height}
+      />
 
       <h2>{contentfulNews.title}</h2>
       <time dateTime={contentfulNews.publishDate}>
@@ -81,6 +87,15 @@ export const query = graphql`
       eyecatch {
         gatsbyImageData(width: 500, layout: CONSTRAINED)
         description
+        file {
+          details {
+            image {
+              width
+              height
+            }
+          }
+          url
+        }
       }
       content {
         raw

@@ -43,6 +43,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   )
 
+  const blogListPerPage = 10
+  const blogList = blogresult.data.allContentfulBlog.edges.length
+  const blogPages = Math.ceil(blogList / blogListPerPage)
+
+  Array.from({ length: blogPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/bloglist/` : `/bloglist/${i + 1}`,
+      component: path.resolve("./src/templates/bloglist.jsx"),
+      context: {
+        skip: blogListPerPage * i,
+        limit: blogListPerPage,
+      },
+    })
+  })
+
   const newsresult = await graphql(`
     query {
       allContentfulNews(sort: { fields: publishDate, order: DESC }) {
@@ -82,4 +97,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     }
   )
+
+  const newsListPerPage = 50
+  const newsList = newsresult.data.allContentfulNews.edges.length
+  const newsPages = Math.ceil(newsList / newsListPerPage)
+
+  Array.from({ length: newsPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/newslist/` : `/newslist/${i + 1}`,
+      component: path.resolve("./src/templates/newslist.jsx"),
+      context: {
+        skip: newsListPerPage * i,
+        limit: newsListPerPage,
+      },
+    })
+  })
 }
