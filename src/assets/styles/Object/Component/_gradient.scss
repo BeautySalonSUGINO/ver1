@@ -1,6 +1,28 @@
 @use "../../Foundation/variable" as *;
 
 .gradilent {
+  &__1 {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 128px;
+    margin-bottom: -128px;
+    background: linear-gradient(rgba(49, 103, 69, 1), rgba(0, 0, 0, 0));
+    z-index: 777;
+  }
+
+  &__2 {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 128px;
+    margin-top: -128px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(88, 56, 34, 1));
+    z-index: 777;
+  }
+
   &__3 {
     display: block;
 

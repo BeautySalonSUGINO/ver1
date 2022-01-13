@@ -14,5 +14,6 @@ import "@stylesComponent/_border.scss"
 import "@stylesComponent/_h2.scss"
 import "@stylesComponent/_scissorsButton.scss"
 // Object/Utillity
+import "@stylesUtillity/_font-size.scss"
 import "@stylesUtillity/_margin.scss"
 import "@stylesUtillity/_padding.scss"

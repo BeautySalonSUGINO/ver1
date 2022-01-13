@@ -2,14 +2,15 @@ import React from "react"
 
 import { graphql } from "gatsby"
 
+import HamburgerMenu from "@components/HamburgerMenu"
 import TopMainVisualHeader from "@components/TopMainVisualHeader"
 import ProductArea from "@components/ProductArea"
 import InfomationArea from "@containers/InfomationArea"
 import BaseFooter from "@components/BaseFooter"
+import ConceptArea from "@components/ConceptArea"
 
 import Seo from "@containers/Seo"
 import NewsArea from "@containers/NewsArea"
-import HamburgerMenu from "@components/HamburgerMenu"
 
 const Index = ({ data }) => {
   return (
@@ -23,6 +24,8 @@ const Index = ({ data }) => {
       <ProductArea />
 
       <NewsArea data={data} />
+
+      <ConceptArea />
 
       <InfomationArea />
 
