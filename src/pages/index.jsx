@@ -8,6 +8,7 @@ import ProductArea from "@components/ProductArea"
 import InfomationArea from "@containers/InfomationArea"
 import BaseFooter from "@components/BaseFooter"
 import ConceptArea from "@components/ConceptArea"
+import MenuArea from "@components/MenuArea"
 
 import Seo from "@containers/Seo"
 import NewsArea from "@containers/NewsArea"
@@ -26,6 +27,8 @@ const Index = ({ data }) => {
       <NewsArea data={data} />
 
       <ConceptArea />
+
+      <MenuArea />
 
       <InfomationArea />
 
