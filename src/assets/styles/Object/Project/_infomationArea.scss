@@ -1,0 +1,14 @@
+@use "../../Foundation/variable" as *;
+
+#p-infomationWrap {
+  display: inline-block;
+  width: 100%;
+
+  background-color: $back-darkbrown;
+}
+
+#p-infomationArea {
+  width: 70%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
