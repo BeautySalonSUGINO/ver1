@@ -27,18 +27,21 @@ const ProductSlider = () => {
       <div>
         <div className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">
+            <a href="https://www.louvredo.com/hair/pro_s_m/">
+              <div className="keen-slider__slide">
+                <StaticImage
+                  layout="fixed"
+                  src="../../assets/images/fukugen-pro.png"
+                  alt="production1"
+                />
+              </div>
+            </a>
+
             <div className="keen-slider__slide">
               <StaticImage
                 layout="fixed"
                 src="../../assets/images/fukugen-pro.png"
-                alt="production1"
-              />
-            </div>
-            <div className="keen-slider__slide">
-              <StaticImage
-                layout="fixed"
-                src="../../assets/images/fukugen-pro.png"
-                alt="production1"
+                alt="production2"
               />
             </div>
           </div>
