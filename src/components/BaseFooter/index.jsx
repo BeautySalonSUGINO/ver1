@@ -6,7 +6,7 @@ const BaseFooter = () => {
   return (
     <footer className="baseFooter">
       <div className="baseFooter__div">
-        <p>&copy;2021 BeautySalon SUGINO</p>
+        <p>&copy;2022 BeautySalon SUGINO</p>
       </div>
     </footer>
   )
