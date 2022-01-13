@@ -27,6 +27,10 @@ const HamburgerMenu = () => {
         BLOG
       </Link>
 
+      <Link to="#menu" className="menu-item">
+        MENU
+      </Link>
+
       <Link to="/contact" className="menu-item">
         CONTACT
       </Link>
