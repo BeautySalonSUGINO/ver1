@@ -28,8 +28,10 @@ img {
 a {
   text-decoration: none;
   color: $textColor;
+  transition: 0.3s;
 
   &:hover {
     color: rgba($color: $textColor, $alpha: 0.7);
+    transition: 0.3s;
   }
 }

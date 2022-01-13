@@ -1,4 +1,4 @@
-.productSlider {
+.c-productSlider {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -33,7 +33,7 @@
     }
   }
 
-  &__arrow {
+  &--arrow {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +41,11 @@
     margin: 0 0 30px 32px;
     button {
       width: 48px;
+      transition: 0.2s;
+      &:hover {
+        opacity: 0.5;
+        transition: 0.2s;
+      }
     }
   }
 }
