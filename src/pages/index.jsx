@@ -3,16 +3,20 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import TopMainVisualHeader from "@components/TopMainVisualHeader"
-
-import NewsArea from "@containers/NewsArea"
+import ProductArea from "@components/ProductArea"
 
 import Seo from "@containers/Seo"
+import NewsArea from "@containers/NewsArea"
 
 const Index = ({ data }) => {
   return (
     <>
       <Seo />
+
       <TopMainVisualHeader />
+
+      <ProductArea />
+
       <NewsArea data={data} />
     </>
   )
