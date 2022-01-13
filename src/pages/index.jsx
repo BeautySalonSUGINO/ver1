@@ -9,11 +9,14 @@ import BaseFooter from "@components/BaseFooter"
 
 import Seo from "@containers/Seo"
 import NewsArea from "@containers/NewsArea"
+import HamburgerMenu from "@components/HamburgerMenu"
 
 const Index = ({ data }) => {
   return (
     <>
       <Seo />
+
+      <HamburgerMenu />
 
       <TopMainVisualHeader />
 

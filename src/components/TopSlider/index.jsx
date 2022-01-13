@@ -9,9 +9,9 @@ const TopSlider = () => {
     arrows: false,
     dots: false,
     infinite: true,
+    autoplaySpeed: 7000,
     speed: 1000,
     fade: true,
-    cssEase: "linear",
   }
   return (
     <Slider {...settings}>
