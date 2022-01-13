@@ -5,6 +5,7 @@ import { slide as Menu } from "react-burger-menu"
 import "@stylesComponent/_hamburgerMenu.scss"
 
 import suginoLogo from "@images/logo.png"
+import twitterIcon from "@images/twitter-icon.svg"
 import instagramIcon from "@images/instagram-icon.svg"
 import facebookIcon from "@images/facebook-icon.svg"
 
@@ -26,12 +27,21 @@ const HamburgerMenu = () => {
         BLOG
       </Link>
 
+      <Link to="#menu" className="menu-item">
+        MENU
+      </Link>
+
       <Link to="/contact" className="menu-item">
         CONTACT
       </Link>
 
       <div id="c-hamburgerMenu--snsIconArea">
         <div id="c-hamburgerMenu--snsIcon">
+          <a href="https://twitter.com/Salon_SUGINO">
+            <img src={twitterIcon} alt="Twitterのアイコン" />
+          </a>
+        </div>
+        <div id="c-hamburgerMenu--snsIcon" className="u-ml__16px">
           <a href="https://www.instagram.com/beautysalon_sugino/">
             <img src={instagramIcon} alt="Instagramのアイコン" />
           </a>

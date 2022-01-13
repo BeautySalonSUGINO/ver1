@@ -1,0 +1,9 @@
+.c-menuContent {
+  display: flex;
+  justify-content: space-between;
+
+  &--subMenu {
+    width: 50%;
+    max-width: 500px;
+  }
+}

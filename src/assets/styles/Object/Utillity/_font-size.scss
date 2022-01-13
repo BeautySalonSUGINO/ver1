@@ -1,8 +1,20 @@
 .u-fs {
+  &__1rem {
+    font-size: 1rem; //16px
+  }
+  &__1-5rem {
+    font-size: 1.5rem; //24px
+  }
+  &__1-75rem {
+    font-size: 1.75rem; //28px
+  }
   &__2rem {
-    font-size: 2rem;
+    font-size: 2rem; // 32px
+  }
+  &__2-5rem {
+    font-size: 2.5rem; // 36px
   }
   &__3rem {
-    font-size: 3rem;
+    font-size: 3rem; // 48px
   }
 }

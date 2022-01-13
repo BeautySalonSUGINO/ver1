@@ -9,8 +9,7 @@ import GoogleMap from "../GoogleMap"
 const InfomationArea = () => {
   return (
     <div id="p-infomationWrap">
-      <span className="gradilent__3 u-mb__32px"></span>
-      <section id="p-infomationArea">
+      <section id="p-infomationArea" className="u-pt__32px">
         <Infomation />
         <GoogleMap />
       </section>
