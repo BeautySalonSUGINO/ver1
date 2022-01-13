@@ -1,53 +1,73 @@
 .u-mt {
   &__4px {
-    margin-top: 4px;
+    margin-top: 4px !important;
   }
+
   &__5px {
-    margin-top: 5px;
+    margin-top: 5px !important;
   }
+
   &__16px {
-    margin-top: 16px;
+    margin-top: 16px !important;
   }
+
   &__32px {
-    margin-top: 32px;
+    margin-top: 32px !important;
   }
+
+  &__48px {
+    margin-top: 48px !important;
+  }
+
+  &__64px {
+    margin-top: 64px !important;
+  }
+
   &__96px {
-    margin-top: 96px;
+    margin-top: 96px !important;
   }
 }
 
 .u-mr {
   &__16px {
-    margin-right: 16px;
+    margin-right: 16px !important;
   }
 }
 
 .u-mb {
   &__12px {
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
   }
 
   &__16px {
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
   }
 
   &__32px {
-    margin-bottom: 32px;
+    margin-bottom: 32px !important;
+  }
+
+  &__48px {
+    margin-bottom: 48px !important;
+  }
+
+  &__64px {
+    margin-bottom: 64px !important;
   }
 
   &__96px {
-    margin-bottom: 96px;
+    margin-bottom: 96px !important;
   }
 }
 
 .u-ml {
   &__16px {
-    margin-left: 16px;
+    margin-left: 16px !important;
   }
   &__32px {
-    margin-left: 32px;
+    margin-left: 32px !important;
   }
   &__96px {
-    margin-left: 96px;
+    margin-left: 96px !important;
   }
 }
