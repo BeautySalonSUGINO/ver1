@@ -2,11 +2,11 @@ import React from "react"
 import BaseHeader from "../BaseHeader"
 import BaseFooter from "../BaseFooter"
 
-const BaseLayout = ({ children }) => {
+const BaseLayout = ({ children, headerText }) => {
   return (
     <>
-      <BaseHeader />
-      {children}
+      <BaseHeader text={headerText} />
+      <main id="main">{children}</main>
       <BaseFooter />
     </>
   )
