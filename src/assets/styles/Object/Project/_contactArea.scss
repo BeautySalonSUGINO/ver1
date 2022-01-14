@@ -1,0 +1,51 @@
+@use "../../Foundation/variable" as *;
+
+#back-brown {
+  background-color: $back-darkbrown;
+}
+
+#p-contactArea {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+
+  #name,
+  #email {
+    width: 30%;
+    border-radius: 8px;
+    padding: 8px 16px;
+  }
+
+  #contact {
+    width: 60%;
+    border-radius: 8px;
+
+    padding: 16px;
+  }
+
+  &--submit {
+    text-align: center;
+    width: 20%;
+    max-width: 320px;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    button {
+      width: 100%;
+      padding: 8px 16px;
+      color: white;
+      transition: 0.3s;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+        transition: 0.3s;
+      }
+    }
+
+    &:hover {
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      transition: 0.3s;
+    }
+  }
+}
