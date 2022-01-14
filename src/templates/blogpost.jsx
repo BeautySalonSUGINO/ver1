@@ -7,6 +7,7 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
 
 import BaseLayout from "@components/BaseLayout"
+import HamburgerMenu from "@components/HamburgerMenu"
 
 import Seo from "@containers/Seo"
 
@@ -37,41 +38,45 @@ const options = {
 const BlogPost = ({ data, pageContext, location }) => {
   const contentfulBlog = data.contentfulBlog
   return (
-    <BaseLayout>
-      <Seo
-        pagetitle={contentfulBlog.title}
-        pagedesc={`${documentToPlainTextString(
-          JSON.parse(contentfulBlog.content.raw)
-        ).slice(0, 70)}...`}
-        pagepath={location.pathname}
-        pageimg={contentfulBlog.eyecatch.file.url}
-        pageimgw={contentfulBlog.eyecatch.file.details.image.width}
-        pageimgh={contentfulBlog.eyecatch.file.details.image.height}
-      />
+    <>
+      <HamburgerMenu />
 
-      <h2>{contentfulBlog.title}</h2>
-      <time dateTime={contentfulBlog.publishDate}>
-        <p>{contentfulBlog.publishDateJP}</p>
-      </time>
-      <ul>
-        {contentfulBlog.category.map(cat => {
-          return <li key={cat.id}>{cat.category}</li>
-        })}
-      </ul>
+      <BaseLayout>
+        <Seo
+          pagetitle={contentfulBlog.title}
+          pagedesc={`${documentToPlainTextString(
+            JSON.parse(contentfulBlog.content.raw)
+          ).slice(0, 70)}...`}
+          pagepath={location.pathname}
+          pageimg={contentfulBlog.eyecatch.file.url}
+          pageimgw={contentfulBlog.eyecatch.file.details.image.width}
+          pageimgh={contentfulBlog.eyecatch.file.details.image.height}
+        />
 
-      <div>{renderRichText(contentfulBlog.content, options)}</div>
+        <h2>{contentfulBlog.title}</h2>
+        <time dateTime={contentfulBlog.publishDate}>
+          <p>{contentfulBlog.publishDateJP}</p>
+        </time>
+        <ul>
+          {contentfulBlog.category.map(cat => {
+            return <li key={cat.id}>{cat.category}</li>
+          })}
+        </ul>
 
-      {pageContext.next && (
-        <Link to={`/blog/${pageContext.next.slug}`} rel="prev">
-          前の記事
-        </Link>
-      )}
-      {pageContext.previous && (
-        <Link to={`/blog/${pageContext.previous.slug}`} rel="next">
-          次の記事
-        </Link>
-      )}
-    </BaseLayout>
+        <div>{renderRichText(contentfulBlog.content, options)}</div>
+
+        {pageContext.next && (
+          <Link to={`/blog/${pageContext.next.slug}`} rel="prev">
+            前の記事
+          </Link>
+        )}
+        {pageContext.previous && (
+          <Link to={`/blog/${pageContext.previous.slug}`} rel="next">
+            次の記事
+          </Link>
+        )}
+      </BaseLayout>
+    </>
   )
 }
 
