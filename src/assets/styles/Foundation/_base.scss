@@ -35,3 +35,10 @@ a {
     transition: 0.3s;
   }
 }
+
+#main {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
