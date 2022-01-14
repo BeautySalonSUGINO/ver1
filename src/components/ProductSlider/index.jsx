@@ -37,13 +37,15 @@ const ProductSlider = () => {
               </div>
             </a>
 
-            <div className="keen-slider__slide">
-              <StaticImage
-                layout="fixed"
-                src="../../assets/images/fukugen-pro.png"
-                alt="production2"
-              />
-            </div>
+            <a href="https://ndot.jp/lineup/shea_shampoo">
+              <div className="keen-slider__slide">
+                <StaticImage
+                  layout="fixed"
+                  src="../../assets/images/n-dot.png"
+                  alt="production2"
+                />
+              </div>
+            </a>
           </div>
         </div>
         {loaded && instanceRef.current && (
