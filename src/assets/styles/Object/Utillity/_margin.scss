@@ -35,6 +35,10 @@
 }
 
 .u-mb {
+  &__8px {
+    margin-bottom: 8px !important;
+  }
+
   &__12px {
     margin-bottom: 12px !important;
   }
@@ -69,6 +73,12 @@
   }
   &__96px {
     margin-left: 96px !important;
+  }
+}
+
+.u-mtb {
+  &__44px {
+    margin: 44px 0;
   }
 }
 

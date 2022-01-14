@@ -3,27 +3,32 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import BaseLayout from "@components/BaseLayout"
+import HamburgerMenu from "@components/HamburgerMenu"
 
 import Seo from "@containers/Seo"
 
 const NewsList = ({ data, location }) => {
   return (
-    <BaseLayout>
-      <Seo
-        pagetitle="ニュース一覧"
-        pagedesc="スギノ美容室のニュース一覧です。"
-        pagepath={location.pathname}
-      />
-      <section>
-        {data.allContentfulNews.edges.map(({ node }) => {
-          return (
-            <Link to={`/news/${node.slug}`} key={node.id}>
-              <h3>{node.title}</h3>
-            </Link>
-          )
-        })}
-      </section>
-    </BaseLayout>
+    <>
+      <HamburgerMenu />
+
+      <BaseLayout headerText="NEWS">
+        <Seo
+          pagetitle="ニュース一覧"
+          pagedesc="スギノ美容室のニュース一覧です。"
+          pagepath={location.pathname}
+        />
+        <section>
+          {data.allContentfulNews.edges.map(({ node }) => {
+            return (
+              <Link to={`/news/${node.slug}`} key={node.id}>
+                <h3>{node.title}</h3>
+              </Link>
+            )
+          })}
+        </section>
+      </BaseLayout>
+    </>
   )
 }
 
