@@ -27,7 +27,7 @@ const HamburgerMenu = () => {
         BLOG
       </Link>
 
-      <Link to="#menu" className="menu-item">
+      <Link to="/#menu" className="menu-item">
         MENU
       </Link>
 
