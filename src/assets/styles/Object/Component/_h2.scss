@@ -1,4 +1,12 @@
+@use "../../Foundation/variable" as *;
+
 .c-h2 {
   font-size: 2rem;
   font-weight: normal;
+}
+
+@media only screen and (max-width: $t-size) {
+  .c-h2 {
+    text-align: center;
+  }
 }
