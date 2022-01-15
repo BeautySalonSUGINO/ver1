@@ -1,3 +1,5 @@
+@use "../../Foundation/variable" as *;
+
 #p-conceptArea {
   width: 100%;
 
@@ -18,5 +20,16 @@
 
   &--forest {
     height: 320px;
+  }
+}
+
+@media only screen and (max-width: $pc-size) {
+  #p-conceptArea {
+    &--content {
+      width: 100%;
+    }
+    &--tree {
+      display: none;
+    }
   }
 }
