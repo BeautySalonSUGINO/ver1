@@ -1,7 +1,8 @@
+@use "../../Foundation/variable" as *;
+
 .c-menuCard {
   width: 50%;
   max-width: 500px;
-
   border-bottom: 1px solid white;
   &--h3 {
     display: flex;
@@ -10,5 +11,14 @@
   }
   &--icon {
     width: 48px;
+  }
+}
+
+@media only screen and (max-width: $t-size) {
+  .c-menuCard {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 16px;
   }
 }
