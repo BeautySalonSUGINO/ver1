@@ -23,7 +23,10 @@ const ConceptArea = () => {
         </p>
 
         <div id="p-conceptArea--tree">
-          <StaticImage src="../../assets/images/tree.png" />
+          <StaticImage
+            src="../../assets/images/tree.png"
+            alt="木のイラストの画像"
+          />
         </div>
       </div>
       <span className="gradilent__1"></span>
@@ -32,6 +35,7 @@ const ConceptArea = () => {
         <StaticImage
           layout="fullWidth"
           src="../../assets/images/forest.jpg"
+          alt="森の画像"
           style={{ height: "100%" }}
         />
       </div>
