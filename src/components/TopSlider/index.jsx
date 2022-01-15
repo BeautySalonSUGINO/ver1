@@ -14,24 +14,26 @@ const TopSlider = () => {
     fade: true,
   }
   return (
-    <Slider {...settings}>
-      <div className="c-topMainVisual__div">
-        <StaticImage
-          layout="fullWidth"
-          src="../../assets/images/main-visual1.png"
-          alt="メインビジュアル1"
-          style={{ height: "100%" }}
-        />
-      </div>
-      <div className="c-topMainVisual__div">
-        <StaticImage
-          layout="fullWidth"
-          src="../../assets/images/main-visual2.png"
-          alt="メインビジュアル2"
-          style={{ height: "100%" }}
-        />
-      </div>
-    </Slider>
+    <div className="c-topMainVisual__wrap">
+      <Slider {...settings}>
+        <div className="c-topMainVisual__div">
+          <StaticImage
+            layout="fullWidth"
+            src="../../assets/images/main-visual1.png"
+            alt="メインビジュアル1"
+            style={{ height: "100%" }}
+          />
+        </div>
+        <div className="c-topMainVisual__div">
+          <StaticImage
+            layout="fullWidth"
+            src="../../assets/images/main-visual2.png"
+            alt="メインビジュアル2"
+            style={{ height: "100%" }}
+          />
+        </div>
+      </Slider>
+    </div>
   )
 }
 
