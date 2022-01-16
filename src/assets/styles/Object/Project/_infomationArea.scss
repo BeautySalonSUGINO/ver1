@@ -12,3 +12,12 @@
   max-width: 1080px;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: $pc-size) {
+  #p-infomationWrap {
+    padding: 0 32px;
+  }
+  #p-infomationArea {
+    width: 100%;
+  }
+}
