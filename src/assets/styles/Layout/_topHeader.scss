@@ -1,3 +1,5 @@
+@use "../Foundation/variable" as *;
+
 #l-topHeader {
   position: relative;
   width: 100%;
@@ -33,3 +35,24 @@
     right: 0;
   }
 }
+
+@media only screen and (max-width: $pc-size) {
+  #l-topHeader {
+    background-color: black;
+    &__logo {
+      width: 60%;
+    }
+    &__scrollArrow {
+      width: 25%;
+    }
+    &__ivy1 {
+      width: 70%;
+    }
+    &__ivy2 {
+      width: 70%;
+    }
+  }
+}
+
+// @media only screen and (max-width: $t-size) {
+// }
