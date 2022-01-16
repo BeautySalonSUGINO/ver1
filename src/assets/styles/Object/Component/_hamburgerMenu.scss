@@ -106,6 +106,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-menu-wrap {
     width: 45% !important;
   }
+  .bm-menu {
+    background: dimgray;
+  }
 }
 
 @media only screen and (max-width: $t-size) {
