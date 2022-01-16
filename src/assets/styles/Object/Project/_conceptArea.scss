@@ -25,11 +25,26 @@
 
 @media only screen and (max-width: $pc-size) {
   #p-conceptArea {
+    &--tree {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $t-size) {
+  #p-conceptArea {
     &--content {
       width: 100%;
     }
-    &--tree {
-      display: none;
+    &--span {
+      font-size: 1rem;
+    }
+    &--concept {
+      font-size: 1.75rem;
+      padding: 0 32px;
+    }
+    &--text {
+      padding: 0 32px;
     }
   }
 }
