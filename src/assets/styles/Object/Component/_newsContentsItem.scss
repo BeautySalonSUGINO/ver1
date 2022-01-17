@@ -1,3 +1,5 @@
+@use "../../Foundation/variable" as *;
+
 .c-newsContentsItem {
   list-style-type: none;
   border-bottom: dashed 2px white;
@@ -8,5 +10,19 @@
 
   &--day {
     width: 96px;
+  }
+}
+
+@media only screen and (max-width: $t-size) {
+  .c-newsContentsItem {
+    a {
+      flex-direction: column;
+    }
+    &--day {
+      margin: 0 !important;
+    }
+    &--title {
+      margin-left: 8px !important;
+    }
   }
 }
