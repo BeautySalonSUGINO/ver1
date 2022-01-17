@@ -20,7 +20,7 @@ const NewsAreaStyle = ({ children }) => {
             TOPIC
           </p>
           <Link to={`/topic`}>
-            <p className="u-ml__96px">
+            <p id="c-topic--text" className=" u-ml__96px">
               新型コロナウイルスに関する感染対策について
             </p>
           </Link>
