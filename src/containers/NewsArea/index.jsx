@@ -16,7 +16,9 @@ const NewsArea = ({ data }) => {
               <li className="c-newsContentsItem--day u-ml__32px">
                 {node.publishDateJP}
               </li>
-              <li className="u-ml__96px">{node.title}</li>
+              <li className="c-newsContentsItem--title u-ml__96px">
+                {node.title}
+              </li>
             </Link>
           </ul>
         )
