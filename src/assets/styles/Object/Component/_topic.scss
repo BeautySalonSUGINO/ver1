@@ -1,3 +1,5 @@
+@use "../../Foundation/variable" as *;
+
 #c-topic {
   width: 80%;
   margin: 0 auto;
@@ -8,5 +10,28 @@
   align-items: center;
   &--p1 {
     width: 96px;
+  }
+}
+
+@media only screen and (max-width: $t-size) {
+  #c-topic {
+    text-align: center;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--p1 {
+      width: 100%;
+      // text-align: center;
+      margin: 0 !important;
+      padding: 16px 0 0 0;
+    }
+    &--text {
+      width: 100%;
+      // text-align: center;
+      font-size: 0.875rem;
+      margin: 0 !important;
+      padding: 16px 0;
+    }
   }
 }
