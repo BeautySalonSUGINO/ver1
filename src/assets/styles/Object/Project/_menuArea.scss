@@ -6,7 +6,6 @@
   display: inline-block;
 
   &--wrap {
-    // position: relative;
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
@@ -16,5 +15,16 @@
     margin: 0 0 0 auto;
     width: 200px;
     right: 0;
+  }
+}
+
+@media only screen and (max-width: $t-size) {
+  #p-menuArea {
+    &--wrap {
+      width: 100%;
+    }
+    &--flower {
+      width: 150px;
+    }
   }
 }

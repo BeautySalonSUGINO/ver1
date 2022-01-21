@@ -5,8 +5,8 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 
-import BaseLayout from "@components/BaseLayout"
 import HamburgerMenu from "@components/HamburgerMenu"
+import BaseLayout from "@components/BaseLayout"
 
 import Seo from "@containers/Seo"
 

@@ -32,7 +32,7 @@ const ProductSlider = () => {
                 <StaticImage
                   layout="fixed"
                   src="../../assets/images/fukugen-pro.png"
-                  alt="production1"
+                  alt="復元ドライヤーのPR画像"
                 />
               </div>
             </a>
@@ -42,7 +42,7 @@ const ProductSlider = () => {
                 <StaticImage
                   layout="fixed"
                   src="../../assets/images/n-dot.png"
-                  alt="production2"
+                  alt="N.のPR画像"
                 />
               </div>
             </a>

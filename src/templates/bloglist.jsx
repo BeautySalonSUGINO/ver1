@@ -2,8 +2,8 @@ import React from "react"
 
 import { graphql, Link } from "gatsby"
 
-import BaseLayout from "@components/BaseLayout"
 import HamburgerMenu from "@components/HamburgerMenu"
+import BaseLayout from "@components/BaseLayout"
 
 import Seo from "@containers/Seo"
 

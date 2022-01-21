@@ -1,3 +1,5 @@
+@use "../../Foundation/variable" as *;
+
 .c-productSlider {
   display: flex;
   justify-content: center;
@@ -47,5 +49,11 @@
         transition: 0.2s;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .c-productSlider {
+    display: none;
   }
 }
