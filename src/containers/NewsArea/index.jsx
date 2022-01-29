@@ -8,19 +8,19 @@ const NewsArea = ({ data }) => {
     <NewsAreaStyle>
       {data.allContentfulNews.edges.map(({ node }) => {
         return (
-          <ul
+          <div
             className="c-newsContentsItem u-mb__12px u-pb__12px"
             key={node.id}
           >
             <Link to={`/news/${node.slug}`}>
-              <li className="c-newsContentsItem--day u-ml__32px">
+              <p className="c-newsContentsItem--day u-ml__32px">
                 {node.publishDateJP}
-              </li>
-              <li className="c-newsContentsItem--title u-ml__96px">
+              </p>
+              <p className="c-newsContentsItem--title u-ml__96px">
                 {node.title}
-              </li>
+              </p>
             </Link>
-          </ul>
+          </div>
         )
       })}
     </NewsAreaStyle>
