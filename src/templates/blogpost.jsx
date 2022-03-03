@@ -53,28 +53,30 @@ const BlogPost = ({ data, pageContext, location }) => {
           pageimgh={contentfulBlog.eyecatch.file.details.image.height}
         />
 
-        <h2>{contentfulBlog.title}</h2>
-        <time dateTime={contentfulBlog.publishDate}>
-          <p>{contentfulBlog.publishDateJP}</p>
-        </time>
-        <ul>
-          {contentfulBlog.category.map(cat => {
-            return <li key={cat.id}>{cat.category}</li>
-          })}
-        </ul>
+        <div className="pageWrap">
+          <h2>{contentfulBlog.title}</h2>
+          <time dateTime={contentfulBlog.publishDate}>
+            <p>{contentfulBlog.publishDateJP}</p>
+          </time>
+          <ul>
+            {contentfulBlog.category.map(cat => {
+              return <li key={cat.id}>{cat.category}</li>
+            })}
+          </ul>
 
-        <div>{renderRichText(contentfulBlog.content, options)}</div>
+          <div>{renderRichText(contentfulBlog.content, options)}</div>
 
-        {pageContext.next && (
-          <Link to={`/blog/${pageContext.next.slug}`} rel="prev">
-            前の記事
-          </Link>
-        )}
-        {pageContext.previous && (
-          <Link to={`/blog/${pageContext.previous.slug}`} rel="next">
-            次の記事
-          </Link>
-        )}
+          {pageContext.next && (
+            <Link to={`/blog/${pageContext.next.slug}`} rel="prev">
+              前の記事
+            </Link>
+          )}
+          {pageContext.previous && (
+            <Link to={`/blog/${pageContext.previous.slug}`} rel="next">
+              次の記事
+            </Link>
+          )}
+        </div>
       </BaseLayout>
     </>
   )

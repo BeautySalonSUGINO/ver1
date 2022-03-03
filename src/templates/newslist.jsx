@@ -18,15 +18,17 @@ const NewsList = ({ data, location }) => {
           pagedesc="スギノ美容室のニュース一覧です。"
           pagepath={location.pathname}
         />
-        <section>
-          {data.allContentfulNews.edges.map(({ node }) => {
-            return (
-              <Link to={`/news/${node.slug}`} key={node.id}>
-                <h3>{node.title}</h3>
-              </Link>
-            )
-          })}
-        </section>
+        <div className="pageWrap">
+          <section>
+            {data.allContentfulNews.edges.map(({ node }) => {
+              return (
+                <Link to={`/news/${node.slug}`} key={node.id}>
+                  <h3>{node.title}</h3>
+                </Link>
+              )
+            })}
+          </section>
+        </div>
       </BaseLayout>
     </>
   )

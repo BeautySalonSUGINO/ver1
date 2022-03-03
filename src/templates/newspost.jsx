@@ -49,28 +49,30 @@ const NewsPost = ({ data, pageContext, location }) => {
           pageimgh={contentfulNews.eyecatch.file.details.image.height}
         />
 
-        <h2>{contentfulNews.title}</h2>
-        <time dateTime={contentfulNews.publishDate}>
-          <p>{contentfulNews.publishDateJP}</p>
-        </time>
-        <ul>
-          {contentfulNews.category.map(cat => {
-            return <li key={cat.id}>{cat.category}</li>
-          })}
-        </ul>
+        <div className="pageWrap">
+          <h2>{contentfulNews.title}</h2>
+          <time dateTime={contentfulNews.publishDate}>
+            <p>{contentfulNews.publishDateJP}</p>
+          </time>
+          <ul>
+            {contentfulNews.category.map(cat => {
+              return <li key={cat.id}>{cat.category}</li>
+            })}
+          </ul>
 
-        <div>{renderRichText(contentfulNews.content, options)}</div>
+          <div>{renderRichText(contentfulNews.content, options)}</div>
 
-        {pageContext.next && (
-          <Link to={`/news/${pageContext.next.slug}`} rel="prev">
-            前のニュース
-          </Link>
-        )}
-        {pageContext.previous && (
-          <Link to={`/news/${pageContext.previous.slug}`} rel="next">
-            次のニュース
-          </Link>
-        )}
+          {pageContext.next && (
+            <Link to={`/news/${pageContext.next.slug}`} rel="prev">
+              前のニュース
+            </Link>
+          )}
+          {pageContext.previous && (
+            <Link to={`/news/${pageContext.previous.slug}`} rel="next">
+              次のニュース
+            </Link>
+          )}
+        </div>
       </BaseLayout>
     </>
   )
