@@ -18,15 +18,17 @@ const BlogList = ({ data, location }) => {
           pagedesc="スギノ美容室のブログ一覧です。"
           pagepath={location.pathname}
         />
-        <section>
-          {data.allContentfulBlog.edges.map(({ node }) => {
-            return (
-              <Link to={`/blog/${node.slug}`} key={node.id}>
-                <h3>{node.title}</h3>
-              </Link>
-            )
-          })}
-        </section>
+        <div className="pageWrap">
+          <section>
+            {data.allContentfulBlog.edges.map(({ node }) => {
+              return (
+                <Link to={`/blog/${node.slug}`} key={node.id}>
+                  <h3>{node.title}</h3>
+                </Link>
+              )
+            })}
+          </section>
+        </div>
       </BaseLayout>
     </>
   )
